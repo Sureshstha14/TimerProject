@@ -1,0 +1,58 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(196, 167, 167);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+#btnContent{
+    height: 30%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: green; */
+}
+#btn {
+    display: flex;
+    flex:wrap;
+    width: 300px;
+    margin: 10px 10px;
+    height: 30vh;
+    /* background-color: rgb(31, 104, 146); */
+    padding: 10px 10px;
+}
+#btn i{
+    font-size: 40px;
+    margin-top: 20px;
+}
+#btn button{
+    font-size: 40px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 30%;
+}
+#screenContent{
+    height: 20%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-direction: column; */
+    margin-top: 50px;
+    /* background-color: red */
+}
+#screenContent .timeVal{
+    font-size: 40px;
+    border: 2px solid black;
+    padding: 10px 10px;
+}
+.timedisplay h5{
+    font-size: 20px;
+}
