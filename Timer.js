@@ -12,9 +12,9 @@ myButton =[
         logo:'<i class="fa fa-repeat"></i>'
     } 
 ]
-time= [{val:0,time:'hours'}
-,{val:0,time:'min'}
-,{val:0,time:'sec'}
+time= [{val:'00',time:'hours'}
+,{val:'00',time:'min'}
+,{val:'00',time:'sec'}
 ]
 let timersecond =0;
 let Timer;    
@@ -28,6 +28,7 @@ function getButton(){
      console.log('timer hlo')
 }
 getButton();
+
 start = document.getElementById('Start').addEventListener('click',setTimer);
 stop = document.getElementById('Stop').addEventListener('click',stopTimer);
 reset = document.getElementById('Reset').addEventListener('click',restartTimer);
@@ -42,6 +43,10 @@ function getScreen(){
     `).join('');
 }
 getScreen();
+
+function formatTime(value){
+  return value<10? value = "0"+value:value;
+}
 function setTimer(){
     let secScreen = document.getElementById('sec');
     let minScreen = document.getElementById('min');
@@ -49,9 +54,9 @@ function setTimer(){
     if(Timer)return;
     Timer = setInterval(()=>{
         timersecond++;
-        hoursScreen.innerHTML= Math.floor(timersecond/3600);
-        minScreen.innerHTML=Math.floor((timersecond%3600)/60);
-        secScreen.innerHTML=timersecond%60;
+        hoursScreen.innerHTML= formatTime(Math.floor(timersecond/3600));
+        minScreen.innerHTML=formatTime(Math.floor((timersecond%3600)/60));
+        secScreen.innerHTML=formatTime(timersecond%60);
    },1000)
 }
 
